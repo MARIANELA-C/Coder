@@ -1,0 +1,532 @@
+/******Generales********/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*****************************************RESPONSIVE SMARTPHONE************************************/
+@media (max-width: 480px){
+    
+nav{
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(126, 12, 107);
+    padding: 20px;
+}
+ul{
+    list-style-type: none;/*menu sin viñetas*/
+}
+ul li{
+    margin: 5px;
+    background-color: rgb(191, 159, 221);
+    padding: 10px 35px;
+    border-radius: 4px;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    font-family: "static";
+
+}
+
+#cajaUno{
+    display: flex;
+}
+h1{
+   text-align: center;
+   padding: 20px 10px 10px;
+   text-decoration: underline;
+}
+h2{
+    text-align: center;
+   padding: 10px 10px;
+}
+a{
+    margin: 15px;
+    background-color: rgb(191, 159, 221);
+    padding: 10px 35px;
+    border-radius: 4px;
+}
+
+/****************Clases*****************/
+
+.menuFlex{/*se aplico en index*/
+    display: flex;
+    flex-flow: column wrap;/*columna,multilinea*/
+    justify-content: center;/*distribucion a lo largo de la fila*/
+    align-items: center;/*distribucion a lo alto de la fila, en este caso centrar*/
+}
+.botonesFlex{/*se alico en index*/
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+.texto{/*se aplico en index*/
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    margin: 10%;
+    padding: 5%;
+}
+.section{/*se aplico en index*/
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: justify;
+}
+
+
+/**************Grid por Areas**************/
+#gridAreas{ 
+    display: grid;
+    grid-template-areas: 
+    "menu"
+    "cabeza"
+    "titulo1"
+    "titulo2"
+    "imgUno"
+    "uno"
+    "dos"
+    "tres"
+    "cuatro"
+    ;
+    grid-template-columns: 100%; /*medidas de las columnas*/
+    grid-template-rows: 1fr;/*medidas de las filas*/
+    grid-column-gap: 5px;/*espacios entre columnas, esto reemplaza el uso de margenes*/
+    grid-row-gap: 5px;/*espacios entre filas, esto reemplaza el uso de margenes */
+}
+
+/*************Nombre de las areas**********/
+
+header{
+    grid-area: cabeza;
+}
+nav{
+    grid-area: menu;
+}
+h1{
+    grid-area: titulo1;
+}
+h2{
+    grid-area: titulo2;
+}
+
+#cajaUno{
+    grid-area: uno;
+    display: flex;
+}
+#cajaDos{
+    grid-area: dos;
+    display: flex;
+}
+#cajaTres{
+        grid-area: tres;
+        display: flex;
+}
+#cajaCuatro{
+    grid-area: cuatro;
+    display: flex;
+}
+
+/****************Tipografia*****************/
+
+@font-face{
+    font-family: "static";
+    src: url(/tipografia/static/Cinzel-Regular.ttf);
+}
+
+/***********Grid area productos**************/
+
+#gridAreasProductos{
+    display: grid;
+    grid-template-areas: 
+    "menu"
+    "cabeza"
+    "caja1"
+    "caja2"
+    ;
+    grid-template-columns: 100%; /*medidas de las columnas*/
+    grid-template-rows: 1fr;/*medidas de las filas*/
+    grid-column-gap: 5px;/*espacios entre columnas, esto reemplaza el uso de margenes*/
+    grid-row-gap: 5px;/*espacios entre filas, esto reemplaza el uso de margenes */
+}
+/************Nombre de las areas***********/
+
+#uno{
+    grid-area: caja1;
+    display: flex;
+    
+}
+#dos{
+    grid-area: caja2;
+    display: flex;
+}  
+
+.sectionFlex{
+   display: flex;
+   flex-flow: column wrap;
+}
+.textoProductos{
+    text-align: justify;
+    margin: 5% 5%;
+    padding: 10px;
+}
+.article{
+    display: flex;flex-flow: column-reverse wrap;
+    justify-content: center;
+    align-items: center;
+}
+}
+
+
+/**************************************************RESPONSIVE TABLET**************************************/
+
+@media (min-width:481px) and (max-width:1023px){
+    nav{
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(126, 12, 107);
+        padding: 20px;
+    }
+    ul{
+        list-style-type: none;/*menu sin viñetas*/
+    }
+    ul li{
+        margin: 5px;
+        background-color: rgb(191, 159, 221);
+        padding: 10px 35px;
+        border-radius: 4px;
+    }
+    body{
+        width: 100%;
+        height: 100vh;
+        font-family: "static";
+    }
+    
+    #cajaUno{
+        display: flex;
+    }
+    h1{
+       text-align: center;
+       padding: 20px 10px 10px;
+       text-decoration: underline;
+    }
+    h2{
+        text-align: center;
+       padding: 10px 10px;
+    }
+    a{
+        margin-left: 10px;
+        margin-bottom: 100px;
+        background-color: rgb(191, 159, 221);
+        padding: 10px 35px;
+        border-radius: 4px;
+    }
+    
+    /*****************Clases******************/
+    
+    .menuFlex{/*se aplico en index*/
+        display: flex;
+        flex-flow: column wrap;/*fila, no multilinea*/
+        justify-content: center;/*distribucion a lo largo de la fila*/
+        align-items: center;/*distribucion a lo alto de la fila, en este caso centrar*/
+    }
+    .botonesFlex{/*se alico en index*/
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .texto{/*se aplico en index*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+        padding-right: 5%;
+    }
+    .section{/*se aplico en index*/
+        display: flex;
+        padding: 5%;
+    }
+    .textoProductos{
+        padding: 5%;
+        justify-content: center;
+        align-items:center;
+        text-align: justify; 
+        display: flex;
+        width: 50%;
+          
+    
+    }
+    .article{
+        display: flex;
+        flex-flow: row wrap;
+        
+    }
+    
+    /************Grid por Areas*****************/
+    #gridAreas{ 
+        display: grid;
+        grid-template-areas: 
+        "menu"
+        "titulo1"
+        "titulo2"
+        "imgUno"
+        "uno"
+        "dos"
+        "tres"
+        "cuatro"
+        ;
+        grid-template-columns: 100%; /*medidas de las columnas*/
+        grid-template-rows: 1fr 1fr;/*medidas de las filas*/
+        grid-column-gap: 5px;/*espacios entre columnas, esto reemplaza el uso de margenes*/
+        grid-row-gap: 5px;/*espacios entre filas, esto reemplaza el uso de margenes */
+    }
+    
+    /*************Nombre de las areas**********/
+    
+    header{
+        grid-area: cabeza;
+    }
+    nav{
+        grid-area: menu;
+    }
+    h1{
+        grid-area: titulo1;
+    }
+    h2{
+        grid-area: titulo2;
+    }
+    
+    #cajaUno{
+        grid-area: uno;
+        display: flex;
+    }
+    #cajaDos{
+        grid-area: dos;
+        display: flex;
+    }
+    #cajaTres{
+            grid-area: tres;
+            display: flex;
+    }
+    #cajaCuatro{
+        flex-flow: row nowrap;
+        grid-area: cuatro;
+        display: flex;
+    }
+    
+    /******************Tipografia****************/
+    
+    @font-face{
+        font-family: "static";
+        src: url(/tipografia/static/Cinzel-Regular.ttf);
+    }
+    
+    /***********Grid area productos**************/
+    
+    #gridAreasProductos{
+        display: grid;
+        grid-template-areas: 
+        "menu"
+        "cabeza"
+        "caja1"
+        "caja2"
+        ;
+        grid-template-columns: 100%; /*medidas de las columnas*/
+        grid-template-rows: 1fr;/*medidas de las filas*/
+        grid-column-gap: 5px;/*espacios entre columnas, esto reemplaza el uso de margenes*/
+        grid-row-gap: 5px;/*espacios entre filas, esto reemplaza el uso de margenes */
+    }
+    /*************Nombre de las areas*********/
+    
+    #uno{
+        grid-area: caja1;
+        display: flex;
+        
+    }
+    #dos{
+        grid-area: caja2;
+        display: flex;
+    }  
+    
+    .sectionFlex{
+       display: flex;
+       flex-flow: column wrap;
+    }
+    }
+
+
+
+/*************************************************RESPONSIVE DESCKTOP************************************************/
+@media (min-width: 1024px){
+
+
+nav{
+    background-color: rgb(126, 12, 107);
+    padding: 20px;
+}
+ul{
+    list-style-type: none;/*menu sin viñetas*/
+}
+ul li{
+    margin-left: 5px;
+    background-color: rgb(191, 159, 221);
+    padding: 10px 35px;
+    border-radius: 4px;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    font-family: "static";
+}
+
+#cajaUno{
+    display: flex;
+}
+h1{
+   text-align: center;
+   padding: 20px 10px 10px;
+   text-decoration: underline;
+}
+h2{
+    text-align: center;
+   padding: 10px 10px;
+}
+a{
+    margin-left: 10px;
+    margin-bottom: 100px;
+    background-color: rgb(191, 159, 221);
+    padding: 10px 35px;
+    border-radius: 4px;
+}
+
+/*********Clases**************/
+
+.menuFlex{/*se aplico en index*/
+    display: flex;
+    flex-flow: row nowrap;/*fila, no multilinea*/
+    justify-content: space-evenly;/*distribucion a lo largo de la fila*/
+    align-items: center;/*distribucion a lo alto de la fila, en este caso centrar*/
+}
+.botonesFlex{/*se alico en index*/
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.texto{/*se aplico en index*/
+    text-align: justify;
+    padding: 10px 30% 0px 5px;
+}
+.section{/*se aplico en index*/
+    padding: 10% 10% 1% 5%;
+}
+.textoProductos{
+    text-align: justify;
+    margin: 0 2%;
+    
+
+}
+.article{
+    display: flex;
+    padding: 3% 0%;
+}
+
+/*******Grid por Areas******/
+#gridAreas{ 
+    display: grid;
+    grid-template-areas: 
+    "menu menu"
+    "titulo1 titulo1"
+    "titulo2 titulo2"
+    "imgUno imgUno"
+    "uno uno"
+    "dos dos"
+    "tres tres"
+    "cuatro cuatro"
+    ;
+    grid-template-columns: 20% auto 15%; /*medidas de las columnas*/
+    grid-template-rows: 1fr 3fr 3fr 1fr;/*medidas de las filas*/
+    grid-column-gap: 5px;/*espacios entre columnas, esto reemplaza el uso de margenes*/
+    grid-row-gap: 5px;/*espacios entre filas, esto reemplaza el uso de margenes */
+}
+
+/*******Nombre de las areas*******/
+
+header{
+    grid-area: cabeza;
+}
+nav{
+    grid-area: menu;
+}
+h1{
+    grid-area: titulo1;
+}
+h2{
+    grid-area: titulo2;
+}
+
+#cajaUno{
+    grid-area: uno;
+    display: flex;
+}
+#cajaDos{
+    grid-area: dos;
+    display: flex;
+}
+#cajaTres{
+        grid-area: tres;
+        display: flex;
+}
+#cajaCuatro{
+    grid-area: cuatro;
+    display: flex;
+}
+
+/*********Tipografia*********/
+
+@font-face{
+    font-family: "static";
+    src: url(/tipografia/static/Cinzel-Regular.ttf);
+}
+
+/***********Grid area productos**************/
+
+#gridAreasProductos{
+    display: grid;
+    grid-template-areas: 
+    "menu menu menu"
+    "cabeza cabeza cabeza"
+    "caja1 caja1 caja1"
+    "caja2 caja2 caja2"
+    ;
+    grid-template-columns: 1fr 1fr 1fr; /*medidas de las columnas*/
+    grid-template-rows: 1fr 1fr;/*medidas de las filas*/
+    grid-column-gap: 5px;/*espacios entre columnas, esto reemplaza el uso de margenes*/
+    grid-row-gap: 5px;/*espacios entre filas, esto reemplaza el uso de margenes */
+}
+/*****Nombre de las areas*****/
+
+#uno{
+    grid-area: caja1;
+    display: flex;
+    
+}
+#dos{
+    grid-area: caja2;
+    display: flex;
+}  
+
+.sectionFlex{
+   display: flex;
+   flex-flow: row wrap;
+}
+}
